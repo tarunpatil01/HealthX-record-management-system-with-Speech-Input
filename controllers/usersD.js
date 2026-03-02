@@ -15,7 +15,7 @@ module.exports.signupD = async(req, res) => {
             if(err){
                 return next(err);
             }
-            req.flash("success", "Patient's account was created. Welcome to HeathX.");
+            req.flash("success", "Doctor's account was created. Welcome to HealthX.");
             res.redirect("/doctors");
         });//Login after signup directly.
     } catch(e){

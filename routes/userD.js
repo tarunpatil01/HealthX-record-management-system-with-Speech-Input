@@ -14,7 +14,7 @@ routerD.route("/signupD")
 
 routerD.route("/loginD")
     .get( UserDController.renderLoginDForm)
-    .post( saveRedirectUrlD, passport.authenticate("local", { failureRedirect : "/loginD", failureFlash : true }), UserDController.loginD);
+    .post( saveRedirectUrlD, passport.authenticate("doctor-local", { failureRedirect : "/loginD", failureFlash : true }), UserDController.loginD);
 
 routerD.get("/logoutD", UserDController.logoutD);
 

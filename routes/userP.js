@@ -14,8 +14,10 @@ routerP.route("/signupP")
 
 routerP.route("/loginP")
     .get( userPController.renderLoginPForm)
-    .post(saveRedirectUrlP, passport.authenticate("local", { failureRedirect : "/loginP", failureFlash : true }), userPController.loginP);
+    .post(saveRedirectUrlP, passport.authenticate("patient-local", { failureRedirect : "/loginP", failureFlash : true }), userPController.loginP);
 
 routerP.get("/logoutP", userPController.logoutP);
+
+
 
 module.exports = routerP;
